@@ -8,4 +8,6 @@ app.use(cors()) // dessa forma qualquer um pode acessar a aplicação, mas quand
 app.use(express.json())
 app.use(routes)
 
-app.listen(3333)
+app.listen(process.env.PORT || 3333)
+// o heroku cria essa variável de ambiente automaticamente.
+//Se eu estiver no ambiente local, vai utilizar a porta 3333
